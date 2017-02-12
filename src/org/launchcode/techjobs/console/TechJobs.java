@@ -25,14 +25,6 @@ public class TechJobs {
         actionChoices.put("search", "Search");
         actionChoices.put("list", "List");
 
-        // Initialize keys array
-        String[] fieldNames = new String[fieldChoices.size()];
-        Integer i = 0;
-        for (String value : fieldChoices.values()) {
-            fieldNames[i] = value;
-            i++;
-        }
-
         System.out.println("Welcome to LaunchCode's TechJobs App!");
 
         // Allow user to search until they manually quit
