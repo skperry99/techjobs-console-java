@@ -10,13 +10,14 @@ import java.util.Scanner;
 public class TechJobs {
 
     private static Scanner in = new Scanner(System.in);
+    private static HashMap<String, String> columnChoices = new HashMap<>();
 
     public static void main (String[] args) {
 
-        // Initialize our field map with key/name pairs
-        HashMap<String, String> columnChoices = new HashMap<>();
+        // Add key/value pairs to our map
         columnChoices.put("core competency", "Skill");
         columnChoices.put("employer", "Employer");
+        columnChoices.put("location", "Location");
         columnChoices.put("position type", "Position Type");
         columnChoices.put("all", "All");
 
@@ -62,7 +63,7 @@ public class TechJobs {
                 if (searchField.equals("all")) {
                     printJobs(JobData.findByValue(searchTerm));
                 } else {
-                    printJobs(JobData.findByKeyAndValue(searchField, searchTerm));
+                    printJobs(JobData.findByColumnAndValue(searchField, searchTerm));
                 }
             }
 
