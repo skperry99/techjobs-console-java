@@ -10,11 +10,11 @@ import java.util.Scanner;
 public class TechJobs {
 
     private static Scanner in = new Scanner(System.in);
-    private static HashMap<String, String> columnChoices = new HashMap<>();
 
     public static void main (String[] args) {
 
         // Add key/value pairs to our map
+        HashMap<String, String> columnChoices = new HashMap<>();
         columnChoices.put("core competency", "Skill");
         columnChoices.put("employer", "Employer");
         columnChoices.put("location", "Location");
